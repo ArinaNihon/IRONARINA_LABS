@@ -72,9 +72,4 @@ WHEN type='PRIJEM' THEN 'Incoming' END as new_type from bank.trans
 where account_id=396
 group by type;
 # Query 20
-WITH temporaryTable(account_id) as
-    (SELECT sum(amount))
-    from account_id)
-        SELECT EmployeeID,Name, Salary 
-        FROM Employee, temporaryTable 
-        WHERE Employee.Salary > temporaryTable.averageValue;
+

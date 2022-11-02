@@ -79,3 +79,8 @@ select customer_id from payment
 group by customer_id
 order by sum(amount) desc
 Limit 1) ));
+
+select first_name, last_name from customer
+where customer_id in(
+select customer_id from payment
+where amount > (select avg(amount) from payment));
